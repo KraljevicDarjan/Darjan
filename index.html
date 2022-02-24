@@ -5,10 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">"
 </head>
 <body>
-    <p>Szia</p>
-    <label><input type= "text"> </label>
-</body>
+    <script>
+        function onSubmit(token) {
+          document.getElementById("demo-form").submit();
+        }
+      </script>
+    <label>Név: <input type= "text"> </label> <br> <br>
+    <label>Jelszó: <input type="password"></label> <br> <br>
+    <button class="g-recaptcha" 
+        data-sitekey="reCAPTCHA_site_key" 
+        data-callback='onSubmit' 
+        data-action='submit'>Bejelentkezés</button>
+    </body>
 </html>
